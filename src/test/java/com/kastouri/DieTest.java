@@ -4,17 +4,16 @@ import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class DiceTest {
+public class DieTest {
     @Test
     public void rollResultsIsBetween1to6() throws Exception{
         //given
-        DiceRoller diceRoller = new DiceRoller();
+        RandomDieRoller dieRoller = new RandomDieRoller();
 
         //when
-        Integer result = diceRoller.roll();
+        Integer result = dieRoller.roll();
 
-
-        //where
+        //then
         assertThat(result)
                 .isBetween(1,6);
 

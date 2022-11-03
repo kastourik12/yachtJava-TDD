@@ -1,14 +1,23 @@
 package com.kastouri;
 
 public class Yacht {
-    private final DiceRoller diceRoller = new DiceRoller();
+    private final DieRoller diceRoller ;
 
+
+
+    public Yacht(DieRoller diceRoller) {
+        this.diceRoller = diceRoller;
+    }
 
     public String rollDices() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (int i = 0 ; i < 5 ; i++ ){
-            result += String.valueOf(diceRoller.roll());
+            result.append(diceRoller.roll());
         }
-        return result;
+        return result.toString();
+    }
+
+    public int score(ECategory category) {
+        return 0;
     }
 }

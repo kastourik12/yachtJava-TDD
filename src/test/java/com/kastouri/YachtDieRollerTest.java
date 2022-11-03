@@ -2,16 +2,16 @@ package com.kastouri;
 import org.junit.Test;
 import static org.assertj.core.api.Assertions.*;
 
-public class YachtTest {
+public class YachtDieRollerTest {
 
     @Test
     public void rollDicesResultHasFiveNumbers() throws Exception{
         RandomDieRoller diceRoller = new RandomDieRoller();
         //given
         Yacht yacht = new Yacht(diceRoller);
-        //when
-        String result = yacht.rollDices();
         //where
+        String result = yacht.rollDices();
+        //then
         assertThat(result)
                 .hasSize(5);
     }
